@@ -24,8 +24,12 @@ export function useRecipes(){
 
 
   async function createRecipe(formData){
-    const {data} = await axios.post('/api/recipes', formData)
-    setRecipes(prev =>[data, ...prev] )
+    try {
+    const { data } = await axios.post('/api/recipes', formData)
+    setRecipes(prev => [data, ...prev])
+  } catch (e) {
+    throw e
+  }
   }
   async function updateRecipe(id, formData) {
     const {data} = await axios.put(`/api/recipes/${id}`, formData)

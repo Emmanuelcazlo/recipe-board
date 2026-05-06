@@ -9,7 +9,7 @@ router.get('/', async(req, res) => {
 })
 router.post('/', async(req, res) =>{
   try{
-    const recipe =  await Recipe.create(req.doby)
+    const recipe =  await Recipe.create(req.body)
     res.status(201).json(recipe)
   } catch (e){
     res.status(400).json({error: e.message})

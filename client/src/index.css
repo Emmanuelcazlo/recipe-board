@@ -1,0 +1,78 @@
+/* ============================================================
+   RECIPE BOARD — Global Styles
+   client/src/index.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  --color-bg:           #F7F5F0;
+  --color-surface:      #FFFFFF;
+  --color-border:       #E5E3DC;
+  --color-border-soft:  #EDEAE2;
+  --color-text-primary: #1A1A18;
+  --color-text-muted:   #6B6B67;
+  --color-text-faint:   #A8A59E;
+
+  --color-accent:       #3C3489;
+  --color-accent-light: #EEEDFE;
+  --color-accent-border:#534AB7;
+
+  --color-danger:       #A32D2D;
+  --color-danger-light: #FCEBEB;
+
+  /* category badges */
+  --badge-desayuno-bg:  #FAEEDA; --badge-desayuno-tx: #633806;
+  --badge-comida-bg:    #E1F5EE; --badge-comida-tx:   #085041;
+  --badge-cena-bg:      #EEEDFE; --badge-cena-tx:     #3C3489;
+  --badge-postre-bg:    #FBEAF0; --badge-postre-tx:   #72243E;
+  --badge-snack-bg:     #FAECE7; --badge-snack-tx:    #712B13;
+  --badge-bebida-bg:    #E6F1FB; --badge-bebida-tx:   #0C447C;
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.12);
+
+  --transition: .15s ease;
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+}

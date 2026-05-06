@@ -1,0 +1,179 @@
+/* ============================================================
+   RecipeForm.css
+   client/src/components/RecipeForm.css
+   ============================================================ */
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Field groups ────────────────────────────────────────────── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+.form-input,
+.form-textarea,
+.form-select {
+  font-size: 14px;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--color-accent-border);
+  box-shadow: 0 0 0 3px rgba(83,74,183,.1);
+  background: var(--color-surface);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 72px;
+  line-height: 1.5;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6B67' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.form-error {
+  font-size: 11px;
+  color: var(--color-danger);
+  margin-top: 2px;
+}
+
+/* ── Section title ───────────────────────────────────────────── */
+.form-section-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-soft);
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+}
+
+/* ── Ingredient rows ─────────────────────────────────────────── */
+.ingredient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.ingredient-remove {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-faint);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.ingredient-remove:hover {
+  background: var(--color-danger-light);
+  border-color: #F5C6C6;
+  color: var(--color-danger);
+}
+
+.btn-add-ingredient {
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  width: 100%;
+  margin-top: 4px;
+  transition: all var(--transition);
+}
+
+.btn-add-ingredient:hover {
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+/* ── Form actions ────────────────────────────────────────────── */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border-soft);
+  margin-top: 4px;
+}
+
+.btn-submit {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-accent-border);
+  background: var(--color-accent);
+  color: white;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.btn-submit:hover {
+  background: #2F2880;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-cancel {
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+}
+
+.btn-cancel:hover {
+  border-color: var(--color-text-faint);
+  color: var(--color-text-primary);
+}
